@@ -6,7 +6,7 @@ import GameCardContainer from "./GameCardContainer";
 
 const GameGrid = () => {
   const { games, error, isLoading } = useGames();
-  const skeleton = [1, 2, 3, 4, 5, 6, 7, 8]; // using it to map GameCardSkeleton
+  const skeleton = [1, 2, 3, 4, 5, 6]; // using it to map GameCardSkeleton
   return (
     <>
       {error && <Text>{error}</Text>}
