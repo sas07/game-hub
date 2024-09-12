@@ -2,9 +2,6 @@ import { useEffect, useState } from "react";
 import apiClient, { CanceledError } from "../services/apiClient";
 import { AxiosRequestConfig } from "axios";
 
-
-
-
   
   interface Response<T> {
     count: number;
