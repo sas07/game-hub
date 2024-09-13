@@ -18,14 +18,15 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
   const { data, error, isLoading } = useGenres();
 
   if (error) return null;
+  // NB: The "error" and "isLoading" were just kept
+  //there incase we decided to fetch the data from the server instead of the static data we're using.
+  if (isLoading) return <Spinner />; //
 
   return (
     <>
       <Heading fontSize="2xl" marginBottom={3}>
         Genres
       </Heading>
-      {isLoading && <Spinner />}
-
       <List>
         {data.map((genre) => (
           <ListItem key={genre.id} paddingY="5px">
